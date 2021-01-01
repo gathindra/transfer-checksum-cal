@@ -36,9 +36,9 @@ compose.desktop {
         javaHome = System.getenv("JAVA_HOME")
         mainClass = "MainKt"
         nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
+            targetFormats(TargetFormat.Dmg, TargetFormat.Exe, TargetFormat.Deb)
             packageName = "transfer-checksum-cal"
-            version = "0.1-SNAPSHOT"
+            version = "0.1.1"
             description = "Compose for Desktop Example App"
             copyright = "© 2020 Gathindra Gamamadagedon. All rights reserved."
             vendor = "Gathi Soft"
