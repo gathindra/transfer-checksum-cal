@@ -31,11 +31,17 @@ tasks.withType<KotlinCompile>() {
 
 compose.desktop {
     application {
-        javaHome = "/home/gathindra/.sdkman/candidates/java/14.0.2.j9-adpt"
+        // You need java 14 or later for native distributions.
+        // Make sure to install java 14 and set JAVA_HOME to 14
+        javaHome = System.getenv("JAVA_HOME")
         mainClass = "MainKt"
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "transfer-checksum-cal"
+            version = "0.1-SNAPSHOT"
+            description = "Compose for Desktop Example App"
+            copyright = "© 2020 Gathindra Gamamadagedon. All rights reserved."
+            vendor = "Gathi Soft"
         }
     }
 }
